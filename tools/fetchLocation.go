@@ -46,7 +46,7 @@ func FetchLocation(searchText string) (latitude float64, longitude float64, plac
 		return -1, -1, "", fmt.Errorf("error in unmarshalling %v", err)
 	}
 	if len(location.Features) == 0 {
-		return -1, -1, "", errors.New("Unable to find location. Try another search")
+		return -1, -1, "", errors.New("unable to find location. try another search")
 	}
 
 	latitude = location.Features[0].Center[1]
